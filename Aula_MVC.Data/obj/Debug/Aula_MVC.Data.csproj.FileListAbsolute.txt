@@ -1,0 +1,5 @@
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\Aula_MVC.Data\bin\Debug\Aula_MVC.Data.dll
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\Aula_MVC.Data\bin\Debug\Aula_MVC.Data.pdb
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\Aula_MVC.Data\obj\Debug\Aula_MVC.Data.csprojResolveAssemblyReference.cache
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\Aula_MVC.Data\obj\Debug\Aula_MVC.Data.dll
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\Aula_MVC.Data\obj\Debug\Aula_MVC.Data.pdb
