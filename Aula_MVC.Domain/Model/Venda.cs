@@ -10,9 +10,9 @@ namespace Aula_MVC.Domain.Model
    public class Venda : IEntity
     {
        public virtual long Id { get; set; }
-        public string NomeCliente { get; private set; }
-        public DateTime DataVenda { get; private set; }
-        public decimal Total { get; private set; }
+        public virtual string NomeCliente { get;  set; }
+        public virtual DateTime DataVenda { get;  set; }
+        public virtual decimal Total { get;  set; }
         public virtual IList<VendaItem> Itens { get; set; }
 
 

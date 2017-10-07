@@ -43,10 +43,10 @@ namespace Aula_MVC.Data.Map
 
         }
 
-        public EntityVal ConvertToEntityVal<T>(T obj) where T : IEntity
-        {
-            return obj == null ? new EntityVal() : new EntityVal(obj.Id.ToString(), obj.ToString());
-        }
+        //public EntityVal ConvertToEntityVal<T>(T obj) where T : IEntity
+        //{
+        //    return obj == null ? new EntityVal() : new EntityVal(obj.Id.ToString(), obj.ToString());
+        //}
 
     }
 

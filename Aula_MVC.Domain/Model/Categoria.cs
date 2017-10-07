@@ -13,16 +13,16 @@ namespace Aula_MVC.Domain.Model
         public virtual long Id { get; set; }
         public virtual string Nome { get; set; }
 
-        public Categoria(string name)
-        {
-            ValidateNameAndSetName(name);
-        }
-        private void ValidateNameAndSetName(string nome)
-        {
-            DomainException.When(string.IsNullOrEmpty(nome), "Nome obrigatório");
-            DomainException.When(nome.Length < 3, "Nome  inválido");
+        //protected Categoria(string name)
+        //{
+        //    ValidateNameAndSetName(name);
+        //}
+        //protected void ValidateNameAndSetName(string nome)
+        //{
+        //    DomainException.When(string.IsNullOrEmpty(nome), "Nome obrigatório");
+        //    DomainException.When(nome.Length < 3, "Nome  inválido");
 
-            Nome = nome;
-        }
+        //    Nome = nome;
+        //}
     }
 }

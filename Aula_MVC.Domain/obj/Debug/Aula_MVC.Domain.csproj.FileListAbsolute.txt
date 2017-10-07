@@ -3,3 +3,17 @@ C:\Users\asafc\Documents\projetoMVC\Aula_MVC\Aula_MVC.Domain\bin\Debug\Aula_MVC.
 C:\Users\asafc\Documents\projetoMVC\Aula_MVC\Aula_MVC.Domain\obj\Debug\Aula_MVC.Domain.csprojResolveAssemblyReference.cache
 C:\Users\asafc\Documents\projetoMVC\Aula_MVC\Aula_MVC.Domain\obj\Debug\Aula_MVC.Domain.dll
 C:\Users\asafc\Documents\projetoMVC\Aula_MVC\Aula_MVC.Domain\obj\Debug\Aula_MVC.Domain.pdb
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\MVC_SOLID\Aula_MVC.Domain\bin\Debug\Aula_MVC.Domain.dll
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\MVC_SOLID\Aula_MVC.Domain\bin\Debug\Aula_MVC.Domain.pdb
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\MVC_SOLID\Aula_MVC.Domain\bin\Debug\Aula_MVC.Data.dll
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\MVC_SOLID\Aula_MVC.Domain\bin\Debug\NHibernate.dll
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\MVC_SOLID\Aula_MVC.Domain\bin\Debug\FluentNHibernate.dll
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\MVC_SOLID\Aula_MVC.Domain\bin\Debug\Iesi.Collections.dll
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\MVC_SOLID\Aula_MVC.Domain\bin\Debug\Aula_MVC.Data.pdb
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\MVC_SOLID\Aula_MVC.Domain\bin\Debug\NHibernate.xml
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\MVC_SOLID\Aula_MVC.Domain\bin\Debug\FluentNHibernate.pdb
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\MVC_SOLID\Aula_MVC.Domain\bin\Debug\FluentNHibernate.xml
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\MVC_SOLID\Aula_MVC.Domain\bin\Debug\Iesi.Collections.xml
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\MVC_SOLID\Aula_MVC.Domain\obj\Debug\Aula_MVC.Domain.csprojResolveAssemblyReference.cache
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\MVC_SOLID\Aula_MVC.Domain\obj\Debug\Aula_MVC.Domain.dll
+C:\Users\asafc\Documents\projetoMVC\Aula_MVC\MVC_SOLID\Aula_MVC.Domain\obj\Debug\Aula_MVC.Domain.pdb
