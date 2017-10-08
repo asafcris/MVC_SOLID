@@ -1,0 +1,64 @@
+﻿
+@using GridMvc.Html
+@model IList<Aula_MVC.Web.Models.VendaViewModel>
+    @{
+        ViewBag.Title = "Vendas - Lista";
+        Layout = "../Shared/_Layout.cshtml";
+
+    }
+    
+
+
+    <p>
+
+
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="panel panel" data-collapsed="0">
+
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <u> Lista de vendas</u>
+                            <br />
+                            <div class="btn-group">
+
+
+
+                                <a class="btn btn-primary" href="@Url.Action("Cadastro","Venda")">
+                                    <i class="entypo-list-add"></i>
+                                    Novo
+                                </a>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <br /><br />
+                    @ViewBag.Message
+                    <div class="panel-body">
+                        <div class="scroll" id="listaResultado">
+                            @Html.Grid(Model.OrderBy(d => d.NomeCliente)).Columns(columns =>
+                       {
+
+                           columns.Add(d => d.NomeCliente).Titled("Nome Cliente");
+                           columns.Add(d => d.DataVenda).Titled("Data Venda");
+                           columns.Add().RenderValueAs(d => string.Join(",", d.Itens.Select(x => x.Produto.Nome))).Titled("Produtos");
+                           columns.Add(d => d.Total).Titled("Total");
+
+
+
+                       }).WithPaging(25).EmptyText("Nenhum registro encontrado").Selectable(true)
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </p>

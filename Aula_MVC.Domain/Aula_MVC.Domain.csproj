@@ -48,10 +48,9 @@
     <Compile Include="Repository\ICategoriaRepository.cs" />
     <Compile Include="Repository\IProdutoRepository.cs" />
     <Compile Include="Repository\IVendaRepository.cs" />
+    <Compile Include="Service\VendaService.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Service\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Aula_MVC.Data\Aula_MVC.Data.csproj">
       <Project>{c428cf0a-2fcf-4235-9723-545ca08174c7}</Project>

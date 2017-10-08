@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "Produtos - Lista";
+    Layout = "../Shared/_Layout.cshtml";
+
+}
+
+@using GridMvc.Html
+@model IList<Aula_MVC.Web.Models.ProdutoViewModel>
+
+
+
+
+    <p>
+
+      
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="panel panel" data-collapsed="0">
+
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <u> Lista de Produto</u>
+                        <br />
+                        <div class="btn-group">
+
+
+
+                            <a class="btn btn-primary" href="@Url.Action("Cadastro","Produto")">
+                                <i class="entypo-list-add"></i>
+                                Novo
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <br /><br />
+                @ViewBag.Message
+                <div class="panel-body">
+                    <div class="scroll" id="listaResultado">
+                        @Html.Grid(Model.OrderBy(d => d.Nome)).Columns(columns =>
+                {
+                    columns.Add()
+                    .Encoded(false)
+                    .Sanitized(false)
+                    .SetWidth(30)
+                    .RenderValueAs(d =>
+                    @<b>
+                        <a href="@Url.Action("Editar", new { d.Id })" class="btn btn-primary">
+                            Editar
+                        </a>
+                    </b>);
+                    columns.Add(d => d.Nome).Titled("Nome");
+                    columns.Add(d => d.Categoria).Titled("Categoria");
+                    columns.Add(d => d.Preco).Titled("Preço");
+                    columns.Add(d => d.QuantidadeEstoque).Titled("Qtd Estoque");
+
+                }).WithPaging(25).EmptyText("Nenhum registro encontrado").Selectable(true)
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </p>

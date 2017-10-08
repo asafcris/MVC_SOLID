@@ -94,10 +94,6 @@
       <Project>{07b00640-f1ba-404f-98b3-353079599fc3}</Project>
       <Name>Aula_MVC.Repository</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Aula_MVC.Web\Aula_MVC.Web.csproj">
-      <Project>{b6dfddb4-84e8-4511-94b4-222c5cf267cc}</Project>
-      <Name>Aula_MVC.Web</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

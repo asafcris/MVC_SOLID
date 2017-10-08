@@ -1,0 +1,141 @@
+﻿@{
+    ViewBag.Title = "Venda > Detalhes";
+    Layout = "../Shared/_Layout.cshtml";
+}
+@using Aula_MVC.Web.Models
+@model Aula_MVC.Web.Models.VendaViewModel
+
+
+<br />
+@using (Ajax.BeginForm("Cadastro", "Venda", new { controller = "Venda" }, new AjaxOptions
+{
+    HttpMethod = "POST",
+    OnBegin = "beginSaveModal",
+    OnSuccess = "callbackPostAjax"
+}, new { @id = "finalizar_venda_form" }))
+{
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="box-body">
+                <div class="invoice">
+
+                    <div class="row">
+
+                        <div class="col-sm-6 invoice-left">
+
+                            <h3>Venda </h3>
+                            <span></span>
+
+                        </div>
+
+                        <div class="col-sm-6 invoice-right">
+
+                            <h3></h3>
+                            <span></span>
+                        </div>
+
+                    </div>
+                    <hr class="margin" />
+
+                    <div class="col-lg-6">
+
+                        @Html.ValidationSummary(true)
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.NomeCliente, new {@class = "control-label col-md-6"})
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(model => model.NomeCliente, new {@class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.NomeCliente)
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <div class="clearfix"></div>
+                    <div class="row">
+
+                        <div class="col-sm-8 invoice-left">
+
+                            @Html.HiddenFor(x => x.Id)
+
+                            <div id="venda-1-etapa">
+
+                                <div class="col-md-12">
+
+                                    <div style="height: 300px;" class="scroll">
+                                        <table class="table table-striped grid-table" id="tableItens">
+                                            <thead>
+                                                <tr>
+
+                                                    <th style="width: 400px">Produto</th>
+                                                   
+                                                    <th style="width: 120px">Qtd</th>
+                                                    <th style="width: 120px"></th>
+                                                    <th style="width: 120px"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @Html.Partial("_VendaItem", new VendaItemViewModel())
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                       
+
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="submit" class="btn btn-info btn-icon icon-left" id="buttonFinalizarVenda"> <i class="entypo-floppy"></i> Finalizar Venda</button>
+                        <button type="button" class="btn btn-primary btn-icon icon-left" data-dismiss="modal"> <i class="entypo-reply"></i> Sair</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+<script type="text/javascript">
+
+  
+
+    function novoItem() {
+
+        $.ajax({
+            url: '@Url.Action("NovoItemVenda", "Venda")',
+            success: function (data) {
+                $("#tableItens tbody").append(data);
+                $(".Campo_Decimal").setMask('signed-decimal');
+
+                removerItemEvento();
+            }
+        });
+
+    }
+    function removerItemEvento() {
+        $(".buttonRemoverItem").on("click", function (e) {
+            e.preventDefault();
+            var rowItem = $(this).parent().parent();
+            rowItem.remove();
+        });
+    }
+
+  
+
+
+
+   
+
+
+
+
+
+</script>

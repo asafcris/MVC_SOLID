@@ -1,0 +1,39 @@
+﻿
+@model Aula_MVC.Web.Models.VendaItemViewModel
+
+@{
+    var token = System.Guid.NewGuid();
+}
+
+<tr>
+
+
+    <td>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Produto, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(x => x.ProdutoId, new SelectList(ViewBag.Produtos, "Id", "Nome"), "-- Selecione --", new {@class = "form-control col-md-4" })
+
+                @Html.ValidationMessageFor(model => model.ProdutoId)
+            </div>
+        </div>
+    </td>
+   
+   
+    <td>
+        @Html.TextBoxFor(x => x.Quantidade, new { @class = "form-control " })
+    </td>
+   
+
+    <td>
+        <a class="btn btn-info" href="javascript: novoItem();">
+          +
+        </a>
+
+        <a type="button" class="btn btn-info buttonRemoverItem" href="#">
+           -
+        </a>
+    </td>
+
+
+</tr>

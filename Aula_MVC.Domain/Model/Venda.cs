@@ -9,6 +9,10 @@ namespace Aula_MVC.Domain.Model
 {
    public class Venda : IEntity
     {
+       public Venda()
+       {
+           Itens = new List<VendaItem>();
+       }
        public virtual long Id { get; set; }
         public virtual string NomeCliente { get;  set; }
         public virtual DateTime DataVenda { get;  set; }

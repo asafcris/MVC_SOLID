@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Team- List";
+    Layout = "../Shared/_Layout.cshtml";
+
+}
+
+@using GridMvc.Html
+@model IList<Aula_MVC.Web.Models.CategoriaViewModel>
+
+
+
+
+    <p>
+
+      
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="panel panel" data-collapsed="0">
+
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <u> Lista de Categorias</u>
+                        <br />
+                        <div class="btn-group">
+
+
+
+                            <a class="btn btn-primary" href="@Url.Action("Cadastro","Categoria")">
+                                <i class="entypo-list-add"></i>
+                                Nova
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <br /><br />
+                @ViewBag.Message
+                <div class="panel-body">
+                    <div class="scroll" id="listaResultado">
+                        @Html.Grid(Model.OrderBy(d => d.Nome)).Columns(columns =>
+                {
+                    columns.Add()
+                    .Encoded(false)
+                    .Sanitized(false)
+                    .SetWidth(30)
+                    .RenderValueAs(d =>
+                    @<b>
+                        <a href="@Url.Action("Editar", new { d.Id })" class="btn btn-primary">
+                            Editar
+                        </a>
+                    </b>);
+                    columns.Add(d => d.Nome).Titled("Nome");
+
+                }).WithPaging(25).EmptyText("Nenhum registro encontrado").Selectable(true)
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </p>
