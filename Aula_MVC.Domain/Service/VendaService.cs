@@ -50,10 +50,7 @@ namespace Aula_MVC.Domain.Service
             for (int i = 0; i < produtoId.Count(); i++)
             {
                 var prod = _produtoRepository.GetById(produtoId[i]);
-                if (prod.QuantidadeEstoque < quantidade[i])
-                {
-                    throw new InvalidOperationException("Quantidade solicitada é menor que o estoque!");
-                }
+               
                 var item = new VendaItem()
                 {
                     Venda = venda,
@@ -61,12 +58,14 @@ namespace Aula_MVC.Domain.Service
                     Quantidade = quantidade[i],
                     Total = quantidade[i] * prod.Preco
                 };
-                if (item.Quantidade <= 0)
+                var msg = string.Empty;
+                //if (prod.QuantidadeEstoque < quantidade[i])
+                if (!item.Verifica_Estoque_E_Qtd_Zerada(out msg))
                 {
-
-                    throw new InvalidOperationException("Existem itens com a quantidade Zerada");
+                    throw new InvalidOperationException(msg);
                 }
-                prod.QuantidadeEstoque -= quantidade[i];
+               
+                prod.Diminuir_Quantidade_Venda(quantidade[i]);
 
                 venda.Itens.Add(item);
             }

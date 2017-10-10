@@ -20,5 +20,6 @@ namespace Aula_MVC.Domain.Model
         public virtual IList<VendaItem> Itens { get; set; }
 
 
+
     }
 }

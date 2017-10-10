@@ -16,12 +16,6 @@ namespace Aula_MVC.Web.Controllers
         }
       
       
-        [Authorize]
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Meu Contato.";
-
-            return View();
-        }
+       
     }
 }

@@ -10,12 +10,18 @@ namespace Aula_MVC.Domain.Model
 {
     public class Produto : IEntity
     {
+
         public virtual long Id { get; set; }
         public virtual string Nome { get;  set; }
         public virtual Categoria Categoria { get;  set; }
         public virtual decimal Preco { get;  set; }
         public virtual decimal QuantidadeEstoque { get;  set; }
 
+        public virtual decimal Diminuir_Quantidade_Venda(decimal quatidade)
+        {
+            QuantidadeEstoque -= quatidade;
+            return QuantidadeEstoque;
+        }
 
 
     }

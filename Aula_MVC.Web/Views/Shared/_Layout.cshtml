@@ -27,9 +27,8 @@
                     <li>@Html.ActionLink("Categorias", "Lista", "Categoria")</li>
                     <li>@Html.ActionLink("Produtos", "Lista", "Produto")</li>
                     <li>@Html.ActionLink("Vendas", "Lista", "Venda")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
+              
             </div>
         </div>
     </div>
@@ -37,7 +36,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Aplicação ASP.NET MVC </p>
         </footer>
         <input type="hidden" id="success"
         value="@TempData["success"]" />

@@ -73,14 +73,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\NHibernateConfig.cs" />
     <Compile Include="Repository\SchemaDBTester.cs" />
+    <Compile Include="UnitTest\VendaTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UnitTest\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Aula_MVC.Data\Aula_MVC.Data.csproj">
       <Project>{c428cf0a-2fcf-4235-9723-545ca08174c7}</Project>
@@ -93,6 +92,10 @@
     <ProjectReference Include="..\Aula_MVC.Repository\Aula_MVC.Repository.csproj">
       <Project>{07b00640-f1ba-404f-98b3-353079599fc3}</Project>
       <Name>Aula_MVC.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aula_MVC.Web\Aula_MVC.Web.csproj">
+      <Project>{b55d3fef-b01e-4d0b-ab3c-03f6d352a901}</Project>
+      <Name>Aula_MVC.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
