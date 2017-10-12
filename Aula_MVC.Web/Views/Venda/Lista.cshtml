@@ -44,16 +44,14 @@
                             @Html.Grid(Model.OrderBy(d => d.NomeCliente)).Columns(columns =>
                        {
 
-                           columns.Add(d => d.NomeCliente).Titled("Nome Cliente");
-                           columns.Add(d => d.DataVenda).Titled("Data Venda");
-                           columns.Add().RenderValueAs(d => string.Join(",", d.Itens.Select(x => x.Produto.Nome))).Titled("Produtos");
+                           columns.Add(d => d.NomeCliente).Filterable(true).Titled("Nome Cliente");
+                           columns.Add(d => d.DataVenda).Filterable(true).Titled("Data Venda");
+                           columns.Add().RenderValueAs(d => string.Join(",", d.Itens.Select(x => x.Produto.Nome))).Filterable(true).Titled("Produtos");
                            columns.Add(d => d.Total).Titled("Total");
 
 
 
-                       }).WithPaging(25).EmptyText("Nenhum registro encontrado").Selectable(true)
-
-                        </div>
+                       }).WithPaging(25).EmptyText("Nenhum registro encontrado")</div>
 
                     </div>
 
