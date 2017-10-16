@@ -47,9 +47,11 @@ namespace Aula_MVC.Web.Helpers.Mappers
                .ForMember(a => a.DataVenda, opt => opt.MapFrom(src => src.DataVenda))
                .ForMember(a => a.NomeCliente, opt => opt.MapFrom(src => src.NomeCliente))
                .ForMember(a => a.Total, opt => opt.MapFrom(src => src.Total))
+               .ForMember(a => a.Itens, opt => opt.Ignore())
                ;
 
             var viewModel = new VendaViewModel();
+            viewModel.Produto = string.Join(",", domainModel.Itens.Select(x => x.Produto.Nome));
 
             Mapper.Map(domainModel, viewModel);
 

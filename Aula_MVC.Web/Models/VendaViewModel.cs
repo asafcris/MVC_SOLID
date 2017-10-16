@@ -17,6 +17,7 @@ namespace Aula_MVC.Web.Models
         public virtual decimal Total { get; set; }
         public virtual IList<VendaItem> Itens { get; set; }
         public string ProdutoQauntidade { get; set; }
+        public string Produto { get; set; }
 
     }
 }

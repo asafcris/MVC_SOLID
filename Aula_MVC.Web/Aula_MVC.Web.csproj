@@ -281,6 +281,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\bootstrap-datepicker.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\custon.js" />
@@ -337,7 +338,6 @@
     <Content Include="App.Release.config">
       <DependentUpon>App.config</DependentUpon>
     </Content>
-    <Content Include="Web1.config" />
     <Content Include="Views\Shared\_GridPager.cshtml" />
     <Content Include="Views\Shared\_Grid.cshtml" />
     <Content Include="Views\Shared\_AjaxGridPager.cshtml" />

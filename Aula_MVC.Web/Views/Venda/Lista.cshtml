@@ -38,7 +38,9 @@
                         </div>
                     </div>
                     <br /><br />
-                    @ViewBag.Message
+
+
+
                     <div class="panel-body">
                         <div class="scroll" id="listaResultado">
                             @Html.Grid(Model.OrderBy(d => d.NomeCliente)).Columns(columns =>
@@ -46,12 +48,12 @@
 
                            columns.Add(d => d.NomeCliente).Filterable(true).Titled("Nome Cliente");
                            columns.Add(d => d.DataVenda).Filterable(true).Titled("Data Venda");
-                           columns.Add().RenderValueAs(d => string.Join(",", d.Itens.Select(x => x.Produto.Nome))).Filterable(true).Titled("Produtos");
+                           columns.Add(d => d.Produto).Filterable(true).Titled("Produtos");
                            columns.Add(d => d.Total).Titled("Total");
 
 
 
-                       }).WithPaging(25).EmptyText("Nenhum registro encontrado")</div>
+                       }).WithMultipleFilters().WithPaging(25).EmptyText("Nenhum registro encontrado")</div>
 
                     </div>
 
